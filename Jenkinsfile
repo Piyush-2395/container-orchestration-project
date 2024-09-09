@@ -39,7 +39,7 @@ pipeline {
                 }
             }
         }
-    }
+
     post {
         success {
             echo 'Deployment completed successfully!'
