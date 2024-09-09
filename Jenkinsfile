@@ -5,21 +5,21 @@ pipeline {
         DOCKER_IMAGE_FRONTEND = "piyush9523/container-orchestration frontend"
         DOCKER_IMAGE_BACKEND = "piyush9523/container-orchestration backend"
     }
-    stages {
-        stage('Build Frontend') {
-            steps {
-                script {
-                    sh 'cd learnerReportCS_frontend && npm install && npm run build'
-                }
-            }
-        }
-        stage('Build Backend') {
-            steps {
-                script {
-                    sh 'cd learnerReportCS_backend && npm install'
-                }
-            }
-        }
+    // stages {
+    //     stage('Build Frontend') {
+    //         steps {
+    //             script {
+    //                 sh 'cd learnerReportCS_frontend && npm install && npm run build'
+    //             }
+    //         }
+    //     }
+    //     stage('Build Backend') {
+    //         steps {
+    //             script {
+    //                 sh 'cd learnerReportCS_backend && npm install'
+    //             }
+    //         }
+        // }
         stage('Docker Build & Push') {
             steps {
                 script {
