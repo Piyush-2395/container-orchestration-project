@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials-id'
+        DOCKER_CREDENTIALS_ID = 'dockerhub'
         DOCKER_IMAGE_FRONTEND = "piyush9523/container-orchestration-frontend"
         DOCKER_IMAGE_BACKEND = "piyush9523/container-orchestration-backend"
     }
