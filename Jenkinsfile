@@ -10,7 +10,7 @@ pipeline {
         stage('Docker Build & Push') {
             steps {
                 script {
-                    docker.withRegistry('', DOCKER_CREDENTIALS_ID) {
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKER_CREDENTIALS_ID) {
                         sh 'docker build -t $DOCKER_IMAGE_FRONTEND:latest ./learnerReportCS_frontend'
                         sh 'docker build -t $DOCKER_IMAGE_BACKEND:latest ./learnerReportCS_backend'
                         sh 'docker push $DOCKER_IMAGE_FRONTEND:latest'
